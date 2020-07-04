@@ -1,8 +1,8 @@
 <div class='product-container'>
-	<div class="product"><h3>{{ name }} - £{{ price }}</h3></div>
-	<div class="image"><img src="{{ imageurl }}"></div>
+	<div class="product"><h3>{{ product.name }} - £{{ product.price }}</h3></div>
+	<div class="image"><img src="{{ product.imageurl }}"></div>
 	<hr>
-	<div class="quantity"><button (click)="subQuantity()">-</button>  {{ quantity }}  <button (click)="addQuantity()">+</button></div>
+	<div class="quantity"><button (click)="subQuantity($event)">-</button>  {{ product.quantity }}  <button (click)="addQuantity($event)">+</button></div>
 	<hr>
-	<div [class]="sale ? 'OnSale' : 'NotOnSale'">On Sale <input (click)="toggleSale()" type="checkbox" name="sale"></div>
+	<div [class]="product.sale ? 'OnSale' : 'NotOnSale'">On Sale <input (click)="toggleSale($event)" type="checkbox" name="sale"></div>
 </div>
