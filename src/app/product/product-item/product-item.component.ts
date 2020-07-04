@@ -28,7 +28,7 @@ export class ProductItemComponent implements OnInit {
   	this.product.quantity++
   }
 
-  subQuantity() {
+  subQuantity(event) {
   	if(this.product.quantity > 0) {
 	  	console.log('taking out of basket')
 	  	this.product.quantity--
